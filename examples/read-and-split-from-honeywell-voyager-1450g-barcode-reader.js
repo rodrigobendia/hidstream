@@ -3,14 +3,14 @@
 const hid = require('../');
 
 const Device = hid.device;
-const keyboard = hid.parser.keyboard;
+const newline = hid.parser.newline;
 const HONEYWELL = 3118;
 const VOYAGER_1450G = 3233;
 
 const scanner = new Device({
   vid: HONEYWELL,
   pid: VOYAGER_1450G,
-  parser: keyboard,
+  parser: newline,
 });
 
 function closeScanner() {
